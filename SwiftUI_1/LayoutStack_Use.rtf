@@ -1,0 +1,584 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Bold;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0\c85000;\csgenericrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+1. 
+\f1\b VSTACK(aliment: HorizontalAlignment, spacing : CGFloat?, content : Closure)---> \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl480\slmult1\pardirnatural\partightenfactor0
+
+\f0\b0 \cf0 This view create a vertical stack to arrange a group of views vertically. The alignment determines the horizontal alignment of the views. It is a structure with the type properties 
+\f1\b Center
+\f0\b0 ,
+\f1\b leading
+\f0\b0  and 
+\f1\b trailing
+\f0\b0 . The 
+\f1\b spacing
+\f0\b0  argument determines the space between the views , and the 
+\f1\b content
+\f0\b0  argument is a closure that defines the list of views we want to show in the stack\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 --> If we use 
+\f1\b Spacer() 
+\f0\b0 Stack will move to the leading \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl480\slmult1\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+2. 
+\f1\b HSTACK(alignment : VerticalAlignment, spacing : CGFloat? , content: Closure)-- 
+\f0\b0 > \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl480\slmult1\pardirnatural\partightenfactor0
+\cf0 This view create a horizontal stack to arrange a group of views horizontal . The 
+\f1\b alignment 
+\f0\b0 argumrnt determines the vertical alignment of the views. It is a structure with the tyoe properties 
+\f1\b bottom,center, firstTextbaseline, lasttextBaseline, 
+\f0\b0 and 
+\f1\b top
+\f0\b0 . The 
+\f1\b spacing 
+\f0\b0 argument determines the space between the views, and the 
+\f1\b content 
+\f0\b0 argument is a closure that defines the list of views we want to show in the stack  \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 3.
+\f1\b  ZSTACK(alignment : Alignement, content :Closure --
+\f0\b0 > \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\sl480\slmult1\pardirnatural\partightenfactor0
+\cf0 The view create a stack that overlays a group of views. The 
+\f1\b alignment
+\f0\b0  argument determines the horizontal and vertical alignment of the views. It is a structure with the type proprties 
+\f1\b bottom,bottomLeading,bottmTrailing,center, leading, top, topLeading, topTrailing,
+\f0\b0  and 
+\f1\b trailing
+\f0\b0  the 
+\f1\b content
+\f0\b0   argument is a closure that defines the list of views we want to show in the stack\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+
+\f1\b zindex(Double)
+\f0\b0  --> This modifier sets the order of the view in the Z exists (The axis perpendicular to the screen)\
+\
+\
+\
+**********************************************************************************************************
+\f1\b Start
+\f0\b0   
+\f1\b Spacer
+\f0\b0  ***************************************************** \
+\
+4. 
+\f1\b Spacer View 
+\f0\b0 \
+\
+
+\f1\b Spacer(minLeangth: CGFloat)\
+\
+--> 
+\f0\b0 This initializer creates a 
+\f1\b Spacer
+\f0\b0  view that generates a flexible space. The 
+\f1\b minLength
+\f0\b0  argument determines the minimum size in points the space can take if the argument is not declare the minimum length is 0\
+**********************************************************************************************************
+\f1\b End
+\f0\b0   
+\f1\b Spacer
+\f0\b0  ***************************************************** \
+\
+\
+\
+\
+\
+**********************************************************************************************************
+\f1\b Start
+\f0\b0   
+\f1\b SafeArea
+\f0\b0  ***************************************************** \
+\
+5. 
+\f1\b SafeArea
+\f0\b0 \
+\
+----> The modifier exapands the safe area with a custom view. The 
+\f1\b edge
+\f0\b0   argument determines theside we want to modify. It is specified with the values 
+\f1\b leading
+\f0\b0  and 
+\f1\b trailing
+\f0\b0  provided by the HorizontalEdge enumeratin or the values 
+\f1\b bottom
+\f0\b0  and 
+\f1\b top 
+\f0\b0 provided by the
+\f1\b  VerticalEdge 
+\f0\b0 enumeration. The 
+\f1\b alignment
+\f0\b0  argumentdetermines the alignment of the views inside the area. It is specified with the type properties 
+\f1\b center,leading 
+\f0\b0 and 
+\f1\b trailing 
+\f0\b0 provided by the 
+\f1\b HorizontalAlignment 
+\f0\b0 structure or the type properties 
+\f1\b bottom,center,firstTextBaseLine,lastTextBaseline 
+\f0\b0 and top 
+\f1\b top 
+\f0\b0 provided by the 
+\f1\b VerticalAlignment 
+\f0\b0 structu. The 
+\f1\b spacing
+\f0\b0   argument determines the space between the views inside area. And finally the 
+\f1\b content 
+\f0\b0 argument is \
+\
+**********************************************************************************************************
+\f1\b End
+\f0\b0   
+\f1\b SafeArea
+\f0\b0  ***************************************************** \
+\
+\
+**********************************************************************************************************
+\f1\b Start
+\f0\b0   
+\f1\b Priority Modifiers
+\f0\b0  ***************************************************** \
+\
+--> 
+\f1\b layoutPriority(Double)
+\f0\b0 --> This modifier sets the viwes priority. A higher priority determines that the view will get as mush space as possible , The value by default is 0\
+\
+
+\f1\b --> fixedSize(horizontal: Bool, vertical: Bool)
+\f0\b0  --> This modifier fixes the view to its ideal horizontal or vertical size if no arguments are specified the size is fixed on both dimensions\
+\
+**********************************************************************************************************
+\f1\b End
+\f0\b0   
+\f1\b Priority Modifiers
+\f0\b0  ***************************************************** \
+\
+\
+\
+********************************************************************************************************** 
+\f1\b Start
+\f0\b0   
+\f1\b Alignment Modifier 
+\f0\b0  ***************************************************** \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\sl480\slmult1\pardirnatural\partightenfactor0
+
+\f1\b \cf0 alignmentGuide(Alignment, computeValue: Closure)
+\f0\b0 \'97> This modifier defines the values of the horizontal or vertical alignment. The first argument determines the type of alignment we want to customise it is defined with the type properties 
+\f1\b center,leading,
+\f0\b0  and 
+\f1\b trailing 
+\f0\b0 from the Horizontal Alignment structure or the type properties 
+\f1\b bottom,center, firstTextBaseline,lastTextBaseline, 
+\f0\b0 and 
+\f1\b top 
+\f0\b0 from the VerticalAlignment structure. The computeValues argument is a closure tat receives the current dimensions odf the view and returns a CGFloat with the new value for the alignment.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+********************************************************************************************************** 
+\f1\b End
+\f0\b0   
+\f1\b Alignment Modifier 
+\f0\b0  ***************************************************** \
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\tx9071\tx9071\tx9071\tx9071\tx9071\tx10284\tx10284\tx11389\tx11389\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Group(content: Closure) --
+\f0\b0 >  This initialiser create a 
+\f1\b Group
+\f0\b0  view that contains the views defined by the closure assigned to the argument.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf2 \cb3 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 ********************************************************************************************************** 
+\f1\b Satrt
+\f0\b0   
+\f1\b Grid 
+\f0\b0  ***************************************************** \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf2 \cb3 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f3\b \cf2 Grid View Initalizer
+\f2\b0 \
+
+\f3\b \
+Grid(alignment, Alignment, horizontalSpacing: CGFloat, verticalSpacing: CGFloat, content: Closure)\
+\'97> 
+\f2\b0 This initialiser creates a grid view to define a grid -like layout. The 
+\f3\b alignment 
+\f2\b0 argument specifies the alignment of the content. It is a structure with the type properties 
+\f3\b leading,center(default) 
+\f2\b0  and 
+\f3\b  trailing. 
+\f2\b0 The 
+\f3\b horizontalSpacing and verticalSpacing arguments 
+\f2\b0 define the space int the posiiton between cells. And the content argument provides the content ofr the grid\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f3\b \cf2 \cb3 GridRow Structure\
+\
+\'97> 
+\f2\b0 This initialiser creates a row for a grid. The 
+\f3\b alignment 
+\f2\b0 argument specifies the vertical alignment of the content it is a structure wit ht type properties 
+\f3\b top,center,bottom,firstTextBaseline
+\f2\b0  and 
+\f3\b lastBaseline
+\f2\b0 . And the 
+\f3\b content 
+\f2\b0 argument provides the content for the row\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf2 \cb3 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f3\b \cf2 Modifier to configure the rows
+\f2\b0 \
+\
+1.
+\f3\b gridCellcolumns(int) \'97> 
+\f2\b0 The modifier specifies the number of columns the cell should occupy\
+\
+2.
+\f3\b gridcoloumnAlignment(HorizontakAlignment)
+\f2\b0 \'97> This modifier overrides the horizontal alignment for a row. The argument is a structure with the type properties 
+\f3\b leading,center
+\f2\b0  and 
+\f3\b trailing.\
+\
+3.gridCellUnsizedAxes(Axis) \'97> 
+\f2\b0 This modifier returns a row that does not ask the gris for additional spaces in the axis specified by the argument. The argument is a structure with the type properties 
+\f3\b  horizontal 
+\f2\b0  and 
+\f3\b  vertical
+\f2\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \
+********************************************************************************************************** 
+\f1\b End
+\f0\b0   
+\f1\b Grid 
+\f0\b0  ***************************************************** \
+\
+********************************************************************************************************** 
+\f1\b Satrt
+\f0\b0   
+\f1\b Customview 
+\f0\b0  ***************************************************** \
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f3\b \cf2 \cb3 Custom Layout
+\f2\b0 \
+\
+
+\f3\b Required methods by the protocol\
+\
+1.  sizeThatFits(Proposal : ProposedViewSize, subviews: Subviews, cache: Cache)\'97> 
+\f2\b0  This method is called on the layout structure when the system needs to know the size of the container view. The method must calculate the size and return a 
+\f3\b CGSize 
+\f2\b0 value with the containers width and height. The 
+\f3\b  proposal 
+\f2\b0 argument is structure that determines the proposed size for the container . The structure defines three type properties to return a proposal 
+\f3\b  zero, infinity 
+\f2\b0 and 
+\f3\b  unspecified . 
+\f2\b0  The 
+\f3\b  subviews 
+\f2\b0  argument is a collection of structure the represent each view in. The container . And the 
+\f3\b cache 
+\f2\b0  argument is a storage space to share the calculated values between methods.\
+\
+\
+
+\f3\b 2. placeSubviews(bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache:Cache)\'97> 
+\f2\b0 This method is called on the layout structure when the system needs to know the position of each view inside the container . The 
+\f3\b  bounds 
+\f2\b0  argument is the bounds of the container . The 
+\f3\b  proposal 
+\f2\b0  argument is a structure that determines the proposal size for the container . The structure defines three type\
+\
+Properties to return a proposal 
+\f3\b zero, infinity , 
+\f2\b0 and 
+\f3\b  unspecified. 
+\f2\b0  The 
+\f3\b  subviews
+\f2\b0  argument is a collection of structure that represent each view in the container. And the 
+\f3\b  cache
+\f2\b0  argument is a storage space to shape the calculated values between methods.\
+\
+
+\f3\b To provide information about the views, the following properties and methods are used:\
+\
+Space:
+\f2\b0  This property returns a ViewSpacing structure with values that determines the space preferred by the view between itself and other views. The structure defines the 
+\f3\b  distance(to:ViewSpacing, along: Axis) 
+\f2\b0  method to return a 
+\f3\b CGFloat 
+\f2\b0  values with the preferred spacing between two views.\
+\
+\
+
+\f3\b Priority -> 
+\f2\b0 This property returns a Double value with the views layout priority.\
+
+\f3\b sizeThatFits(ProposedViewSize)\'97> 
+\f2\b0 This method returns a 
+\f3\b CGSize 
+\f2\b0 value with the size of the view the structure represents. The argument is a structure that determines the proposed size we want to read . The structure defines three type properties to represent a proposal 
+\f3\b zero, infinity 
+\f2\b0  and 
+\f3\b  unspecified.\
+\
+Dimensions(proposal: ProposedViewSize)-> 
+\f2\b0 This method returns a 
+\f3\b ViewDimension 
+\f2\b0  structure with the views size and alignment guides. The 
+\f3\b proposal 
+\f2\b0 argument is a structure that determines the proposed size we want to read ,. The structure defines three type properties to represent a proposal 
+\f3\b  zero, infinity 
+\f2\b0 and 
+\f3\b unspecified .\
+\
+\
+On the other hand, the placeSubviews() method is called in the layout structure when the system mneeds to know the position of each view within the container. Tis method receives similar values to allow us to calculate the right position for each view. To assign the position to the view, the layoutSubview structure includes the following method.\
+\
+\
+place(at: CGPoint, anchor: Unitpoint, proposal: ProposedViewSize)\'97> 
+\f2\b0 This method sets the position of the view ,. The 
+\f3\b at 
+\f2\b0  argument specifies the position in 
+\f3\b x 
+\f2\b0 and 
+\f3\b y coordinates . 
+\f2\b0  The 
+\f3\b  anchor 
+\f2\b0  argument determines what point within in the view is positioned at those coordinates it is a structure returned by the type properties 
+\f3\b  bottom,bottomLeading,bottomTrailing,center leading top,topLeading(
+\f2\b0 default
+\f3\b ) topTrailing,trailing 
+\f2\b0 and 
+\f3\b zero 
+\f2\b0  and the proposal argument is the proposed size for which we ant to set the position.\
+\
+
+\f3\b Note:: \
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2\b0 \cf2 These are three types of proposals 
+\f3\b zero, infinity 
+\f2\b0 and 
+\f3\b  unspecified .
+\f2\b0  The 
+\f3\b  zero 
+\f2\b0  proposal returns the minimum size the view can take (in our case it is 20 by 20 pints because of the padding). The 
+\f3\b  infinity 
+\f2\b0  proposal returns maximum size the view cane take, and the 
+\f3\b  unspecified 
+\f2\b0  proposal returns the views ideal size (the size determined by the size of the content , padding and border)\
+\
+\
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f3\b \cf2 SwiftUI includes the following structure to define horizontal and vertical layouts:
+\f2\b0 \
+\
+
+\f3\b VStackLayout(alignment: HorizontalAlignment, spacing: CGFloat)\
+\
+\'97> 
+\f2\b0 This structure creates a layout that arrange a group of views vertically. The 
+\f3\b alignment 
+\f2\b0  argument determines the horizontal alignment of the views. It is a structure with the type properties 
+\f3\b  center,leading, 
+\f2\b0  and 
+\f3\b trailing . 
+\f2\b0  And the 
+\f3\b  spacing 
+\f2\b0  argument determines the space between the views.\
+\
+
+\f3\b HStackLayout(alignment : VerticalAlignment, spacing: CGFloat)\
+\'97> 
+\f2\b0 This structure creates a layout that arrange a group of views horizontally . The 
+\f3\b Alignment 
+\f2\b0  arrangement determines the vertical alignment pf the views . It is a structure with the type properties 
+\f3\b  bottom , center, firstTextBaseline,lastTextBaseline and 
+\f2\b0  
+\f3\b top ,
+\f2\b0  And the 
+\f3\b  spacing 
+\f2\b0  argument determines the space between the views.\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 ********************************************************************************************************** 
+\f1\b End
+\f0\b0   
+\f1\b Customview 
+\f0\b0  ***************************************************** \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f2 \cf2 \cb3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb1 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}
